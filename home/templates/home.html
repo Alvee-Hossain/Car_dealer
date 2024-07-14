@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+
+</head>
+
+
+<body>
+<!--navbar section-->
+<header class="header">
+    <div id="menu-btn" class="fas fa-bars"></div>
+    <a href="http://127.0.0.1:8000/" class="logo"> <span>UAP</span>Auto's</a>
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#brands">Brands</a>
+        <a href="#types">Types</a>
+        <a href="#contact">contact</a>
+    </nav>
+    <div id="login-btn">
+        <a href="{%  url 'logout' %}"><button class="btn">logout</button></a>  
+        <i class="far fa-user"></i>
+    </div>
+</header> 
+
+
+<!--home section-->
+<section class="home" id="home">
+    <h3 data-speed="-2" class="home-parallax">discover your car</h3>
+    <img data-speed="5" class="home-parallax" src="{% static 'image/home-img.png' %}" alt="">
+    <a data-speed="7" href="http://127.0.0.1:8000/addcar/" class="btn home-parallax">ADD CAR</a>
+    <a data-speed="7" href="http://127.0.0.1:8000/rent/" class="btn home-parallax">LUXURY RENTAL</a>
+    <a data-speed="7" href="http://127.0.0.1:8000/parts/" class="btn home-parallax">Buy Car Parts</a>
+</section>
+
+
+<!--Brand Section-->
+<section class="cars" id="brands">
+    <div class="container">
+        <h1 class="heading"> Car <span>Brands</span></h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="{% static 'image/logo/audi.png' %}" alt="">
+                <div class="layer">
+                    <a href="{% url 'audi' %}"><h1>AUDI</h1></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="{% static 'image/logo/bmw.png' %}" alt="">
+                <div class="layer">
+                    <a href="{% url 'bmw' %}"><h1>BMW</h1></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="{% static 'image/logo/landrover.png' %}" alt="">
+                <div class="layer">
+                    <a href="{% url 'landrover' %}"><h1>LAND ROVER</h1></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="{% static 'image/logo/honda.png' %}" alt="">
+                <div class="layer">
+                    <a href="{% url 'honda' %}"><h1>HONDA</h1></a>
+                </div>
+            </div>
+            <div class="work">
+                <img style="height: 80%;width: 80%; padding-left: 30px; padding-top: 20px;" src="{% static 'image/logo/mercedes.png' %}" alt="">
+                <div class="layer">
+                    <a href="{% url 'mercedes' %}"><h1>MERCEDES</h1></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="{% static 'image/logo/toyota.png' %}" alt="">
+                <div class="layer">
+                    <a href="{% url 'toyota' %}"><h1>TOYOTA</h1></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!--Types section-->
+<section class="cars" id="types">
+    <div class="container">
+        <h1 class="heading"> <span>Types</span> of cars</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="{% static 'image/type/sedan.png' %}" alt="">
+                <div class="layer">
+                    <a href="{% url 'sedans' %}"><h1>SEDAN</h1></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="{% static 'image/type/suv.png' %}" alt="">
+                
+                <div class="layer">
+                    <a href="{% url 'suvs' %}"><h1>SUV</h1></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="{% static 'image/type/sports.png' %}" alt="">
+                <div class="layer">
+                    <a href="{% url 'sports' %}"><h1>SPORTS</h1></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="{% static 'image/type/convertible.png' %}" alt="">
+                <div class="layer">
+                    <a href="{% url 'convertibles' %}"><h1>CONVERTIBLES</h1></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="{% static 'image/type/used.png' %}" alt="">
+                <div class="layer">
+                    <a href="{% url 'used' %}"><h1>USED</h1></a>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+</section>
+
+
+<!--contact section-->
+
+<section class="contact" id="contact">
+    <h1 class="heading"><span>contact</span> us</h1>
+    <div class="row">
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.7936309898637!2d90.38692567427805!3d23.754737478667323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b0a98eaf3b%3A0xc692432124fcc478!2sUniversity%20of%20Asia%20Pacific%20%7C%20UAP!5e0!3m2!1sen!2sbd!4v1670612238707!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <form action="">
+            <h3>get in touch</h3>
+            <input type="text" placeholder="your name" class="box">
+            <input type="email" placeholder="your email" class="box">
+            <input type="tel" placeholder="subject" class="box">
+            <textarea placeholder="your message" class="box" cols="30" rows="10"></textarea>
+            <input type="submit" value="send message" class="btn">
+        </form>
+    </div>
+</section>
+
+<!--footer section-->
+<section class="footer" id="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="http://127.0.0.1:8000/#home"> <i class="fas fa-arrow-right"></i> home </a>
+            <a href="http://127.0.0.1:8000/#brands"> <i class="fas fa-arrow-right"></i> brands </a>
+            <a href="http://127.0.0.1:8000/#types"> <i class="fas fa-arrow-right"></i> types </a>
+            <a href="http://127.0.0.1:8000/#contact"> <i class="fas fa-arrow-right"></i> contact </a>
+        </div>
+     
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+            <a href="#"> <i class="fas fa-envelope"></i> uapautos@uap-bd.edu </a>
+            <a href="https://goo.gl/maps/E5vLT8DRP2La6GTF7"> <i class="fas fa-map-marker-alt"></i>University of Asia Pacific </a>
+        </div>
+  
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="https://www.facebook.com/fayaj.nakib.9/"> <i class="fab fa-facebook-f"></i> facebook </a>
+            <a href="https://twitter.com/FayajNakib"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="https://www.instagram.com/fayaj.nakib/"> <i class="fab fa-instagram"></i> instagram </a>
+        </div>
+  
+    </div>
+    <div class="credit"> created for CSE 310 | all rights reserved </div>
+</section>
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src=" {% static 'home.js' %}"></script>
+</body>
+</html>
